@@ -1,5 +1,6 @@
 import math
 
+print("hello")
 
 class Foo:
 
