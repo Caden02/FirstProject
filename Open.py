@@ -1,0 +1,43 @@
+import random
+
+
+class Error(Exception):
+    """Base class for other exceptions"""
+    pass
+
+class ValueTooSmallError(Error):
+    """Raised when the input value is too small"""
+    pass
+
+class ValueTooLargeError(Error):
+    """Raised when the input value is too large"""
+    pass
+
+
+# our main program
+# user guesses a number until he/she gets it right
+
+# you need to guess this number
+number = random.randint(0, 50)
+
+while True:
+   try:
+       i_num = int(input("Enter a number: "))
+       if i_num < number:
+           raise ValueTooSmallError
+       elif i_num > number:
+           raise ValueTooLargeError
+       elif type(i_num) != int:
+           raise ValueError
+       break
+   except ValueTooSmallError:
+       print("This value is too small, try again!")
+       print()
+   except ValueTooLargeError:
+       print("This value is too large, try again!")
+       print()
+   except ValueError:
+       print('This value is not a number, try again!')
+       print()
+
+print("Congratulations! You guessed it correctly.")
