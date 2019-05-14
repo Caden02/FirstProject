@@ -10,7 +10,7 @@ ind = np.arange(len(men_means)) # the x locations for the groups
 width = 0.35 # the width of the bars
 
 # Creating a single graph and assigning values to the bars
-fig, ax = plt.subplot()
+fig, ax = plt.subplots()
 rects1 = ax.bar(ind - width/2, men_means, width, yerr=men_std,
                 color='SkyBlue', label='Men')
 rects2 = ax.bar(ind + width/2, women_means, width, yerr=women_std,
