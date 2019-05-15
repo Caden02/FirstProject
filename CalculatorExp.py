@@ -54,9 +54,8 @@ def uInput():
 
 print('Hello, this is Calculator 1.0, enjoy the scrub coding.')
 
-replay = True
 
-while replay:
+while True:
 
     print('Please select which function you would like to use: A = Addition, S = Subtraction,\nM = Multiplication, D = Division, P = Power, Q = Square, R = Square Root:')
     if uInput() == 'A':
@@ -73,21 +72,7 @@ while replay:
          square(sqr2= 2)
     elif choice == 'R':
          squareroot()
-    elif choice != ('A', 'S', 'M', 'D', 'P', 'Q', 'R'):
-        print('You have entered an incorrect letter, please try again.')
-        replay = True
-        continue
-    while True:
-        again = input('Do you wish to use Calculator 1.1 again? y/n').lower()
-        if again == 'y':
-            replay = True
-            break
-        elif again == 'n':
-            print('Thanks for using Calculator 1.1, Have a great day!')
-            replay = False
-            break
-        else:
-            print('Enter either y for yes or n for no.')
+
 
 
 
