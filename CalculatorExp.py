@@ -1,5 +1,5 @@
 import math
-
+import sys
 
 class Error(Exception):
     """Base class for custom exceptions"""
@@ -85,6 +85,22 @@ while True:
     except InvalidError:
         print('Please enter a valid key')
         print()
+    else:
+        while True:
+            ans = input('Would you like to continue using CalculatorExp? y/n ').lower()
+            try:
+                if ans == 'y':
+                    break
+                elif ans == 'n':
+                    print('Have a great day!')
+                    sys.exit()
+                elif ans != ('y', 'n'):
+                    raise InvalidError
+            except InvalidError:
+                print('Please enter either y or n.')
+                print()
+
+
 
 
 
