@@ -79,6 +79,7 @@ while replay:
         continue
     while True:
         again = input('Do you wish to use Calculator 1.1 again? y/n').lower()
+        print()
         if again == 'y':
             replay = True
             break
@@ -88,6 +89,7 @@ while replay:
             break
         else:
             print('Enter either y for yes or n for no.')
+            print()
 
 
 
