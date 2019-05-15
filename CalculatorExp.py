@@ -1,6 +1,14 @@
 import math
 
 
+class Error(Exception):
+    """Base class for custom exceptions"""
+    pass
+
+class InvalidError(Error):
+    """Raised when an incorrect value is given"""
+    pass
+
 def addition():
     print('Please enter the first number you wish to add:')
     add1 = int(input())
@@ -56,22 +64,29 @@ print('Hello, this is Calculator 1.0, enjoy the scrub coding.')
 
 
 while True:
+    try:
+        print('Please select which function you would like to use: A = Addition, S = Subtraction,\nM = Multiplication, D = Division, P = Power, Q = Square, R = Square Root:')
+        if uInput() == 'A':
+            addition()
+        elif choice == 'S':
+            substraction()
+        elif choice == 'M':
+            multiplication()
+        elif choice == 'D':
+            division()
+        elif choice == 'P':
+             power()
+        elif choice == 'Q':
+             square(sqr2= 2)
+        elif choice == 'R':
+             squareroot()
+        elif choice != ('A', 'S', 'M', 'D', 'P', 'Q', 'R'):
+            raise InvalidError
+    except InvalidError:
+        print('Please enter a valid key')
+        print()
 
-    print('Please select which function you would like to use: A = Addition, S = Subtraction,\nM = Multiplication, D = Division, P = Power, Q = Square, R = Square Root:')
-    if uInput() == 'A':
-        addition()
-    elif choice == 'S':
-        substraction()
-    elif choice == 'M':
-        multiplication()
-    elif choice == 'D':
-        division()
-    elif choice == 'P':
-         power()
-    elif choice == 'Q':
-         square(sqr2= 2)
-    elif choice == 'R':
-         squareroot()
+
 
 
 
