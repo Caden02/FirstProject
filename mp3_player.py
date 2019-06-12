@@ -116,7 +116,8 @@ playbtn.pack()
 # Adding a Stop Button and assigning a Stop command to it
 def stop_music():
     """Stops the currently playing music and restarts it from the beginning."""
-
+    global mus_play
+    mus_play = 1
     mixer.music.stop()
     statusbar['text'] = 'Music stopped'
 
