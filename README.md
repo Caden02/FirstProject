@@ -1,3 +1,3 @@
-# FirstProject
+# Learning
 
 Learning the ways of python
